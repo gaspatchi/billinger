@@ -1,0 +1,16 @@
+{
+  "server": {
+    "name": "billinger",
+    "address": "127.0.0.1",
+    "port": 3001,
+    "fondytoken": "wbc3pxj32qbTx4Bmjp0DCuoi9WIdc6zS"
+  },
+  "tarantool": {
+    "user": "gtmau",
+    "password": "gtmau"
+  },
+  "consul": {
+    "address": "127.0.0.1",
+    "port": 8500
+  }
+}
