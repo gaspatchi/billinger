@@ -48,5 +48,3 @@
 
 - `POST` /verify - Callback для проверки платежа
 Платежной системой является Fondy - [api](https://docs.fondy.eu/docs/page/3/)
-
-

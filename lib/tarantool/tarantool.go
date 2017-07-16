@@ -21,7 +21,7 @@ func init() {
 	viper.AddConfigPath(".")
 	err := viper.ReadInConfig()
 	if err != nil {
-		logrus.WithFields(logrus.Fields{"module": "Tarantool"}).Panic("Consul недоступен")
+		logrus.WithFields(logrus.Fields{"module": "Tarantool"}).Panic("Ошибка при чтении конфига")
 		fmt.Print(err)
 	}
 	client, err := api.NewClient(api.DefaultConfig())
