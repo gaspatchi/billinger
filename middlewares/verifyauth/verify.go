@@ -40,7 +40,7 @@ func VerifyAuth(c *gin.Context) {
 	var str = c.Request.Header.Get("Authorization")
 	var result = re.FindStringSubmatch(str)
 	if len(result) != 2 {
-		c.JSON(400, gin.H{"message": "Заголовок отсутсвует"})
+		c.JSON(400, gin.H{"message": "Заголовок отсутствует"})
 		c.Abort()
 		return
 	}

@@ -53,7 +53,7 @@ func InitService() {
 	consulconfig.Address = fmt.Sprintf("%s:%d", viper.GetString("consul.address"), viper.GetInt("consul.port"))
 	client, err := api.NewClient(consulconfig)
 	if err != nil {
-		logrus.WithFields(logrus.Fields{"module": "startup"}).Panic("Ошибка при подулючении к Consul")
+		logrus.WithFields(logrus.Fields{"module": "startup"}).Panic("Ошибка при подключении к Consul")
 		panic(err)
 	}
 	agent := client.Agent()

@@ -43,7 +43,7 @@ func CreateToken(c *gin.Context) {
 	_, err = resty.R().SetBody(request).SetResult(&response).Post("https://api.fondy.eu/api/checkout/url/")
 	if err != nil {
 		logrus.WithFields(logrus.Fields{"module": "CreateToken"}).Error(" ")
-		c.JSON(500, gin.H{"message": "Не удалось получить ответ от платежной системы"})
+		c.JSON(500, gin.H{"message": "Не удалось получить ответ от платёжной системы"})
 		return
 	}
 	if response.Response.ErrorCode == 0 {

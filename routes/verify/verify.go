@@ -24,7 +24,7 @@ func VerifyRefill(c *gin.Context) {
 	}
 	if request.ValidateSignature() != nil {
 		logrus.WithFields(logrus.Fields{"module": "VerifyRefill"}).Error(request)
-		c.JSON(400, gin.H{"message": "Токен невалиден"})
+		c.JSON(400, gin.H{"message": "Токен не валиден"})
 		return
 	}
 	t := tarantool.GetTarantool()

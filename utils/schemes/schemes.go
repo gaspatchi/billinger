@@ -107,7 +107,7 @@ func (scheme *FondyRefill) ValidateSignature() error {
 	if hex.EncodeToString(hash.Sum(nil)) == scheme.Signature {
 		return nil
 	}
-	return errors.New("Токен невалиден")
+	return errors.New("Токен не валиден")
 }
 
 func (scheme *FondyCreate) CreateSignature() (string, error) {
